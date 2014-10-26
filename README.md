@@ -40,7 +40,10 @@ This project contains 2 apps (app1 and app2) that are accessible via the url men
 
 ## Creating a custom component
 
+
 ### Angular based component:
+**Pro-tip:** Instead of following these step-by-step instructions you can take a look at either the `foo` or `bar` component in this repo. These are simple examples, and are probably easier to understand than a textual description.
+
 1. Create a folder in the `components` directory for your component
 2. Create any controllers/directives/filters etc. you like. These files should follow the following convention;
 	- Each file contains only one element. Everything is compiled together so there is no reason to cram everything together in one file.
@@ -56,6 +59,7 @@ This project contains 2 apps (app1 and app2) that are accessible via the url men
 		- a `states` object that defines the states exported by this component (optional). Each state should contain a `controller` and a `templateUrl` property that can be used in a state definition for `ui-router`.
 4. `require()` the component in the main file(s) for the app(s) that use it.
 5. Define new states in the app config. The config should define the url and state name, the `controller` and `templateUrl` should come from the component.
+
 
 ### Non-angular component
 For now this can best be refactored into an angular service when possible, and thus follow the above instructions.
