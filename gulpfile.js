@@ -35,7 +35,7 @@ gulp.task('browserify', function() {
     var entry = paths.scripts.apps[target];
     return browserify({
       entries : [entry],
-      debug : true, //Must be true to presever ngInject annotations
+      debug : true, //Must be true to preseve ngInject annotations
       paths : paths.scripts.paths,
       basedir : paths.scripts.basedir
     })

@@ -13,7 +13,8 @@ var app =angular.module('app1', [
   //Each component exports an angular module, and these modules
   //have set a name property. This enables us to depend on modules
   //using actual properties instead of stringly typed names.
-  foo.module.name
+  foo.module.name,
+  bar.module.name
 ]);
 
 
