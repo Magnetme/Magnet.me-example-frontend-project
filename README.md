@@ -58,9 +58,10 @@ This project contains 2 apps (app1 and app2) that are accessible via the url men
 5. Define new states in the app config. The config should define the url and state name, the `controller` and `templateUrl` should come from the component.
 
 ### Non-angular component
-For now this can best be refactored into an angular servicei when possible, and thus follow the above instructions.
+For now this can best be refactored into an angular service when possible, and thus follow the above instructions.
 
 Notes:
+
 1. It is impossible to directly attach an element to Angular here since that would result in circular dependencies (an app depends on the component, but the component depends on the app). Moreover, it's none of an elements business to which app it will be attached, hence it should not be defined here.
 2. Since the elements are not directly passed to angular, `ngAnnotate` (the tool that makes angular code minification safe) cannot automatically pick up which functions needs to be annotated. Therefore the explicit `ngInject` call is needed, which will be picked up by `ngAnnotate` at compile time. (`ngAnnotate` also support a comment based syntax, but that doesn't work 100% of the time, and since comments are not intended to contain code it must not be used).
 
