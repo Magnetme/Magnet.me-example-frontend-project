@@ -74,7 +74,7 @@ Notes:
 External libraries are compiled alongside the main application. To add a new external library you'll have to do the following (not ideal unfortunately, but the result is pretty decent):
 
 1. Find the library on bower
-2. `bower install <library> --save-dev`
+2. `bower install <library> --save`
 3. Define an alias for the library in `package.json` in the `browser` hash, such that we don't need full paths (see `package.json` for examples).
 4. (optional): if the library is *not* browserify compatible (=it doesn't set `module.exports`) you'll need to setup a shim config in `package.json`. If it does NOT depend on anything you can simply add a `"library" : "globalVariable"` pair to the `browserify-shim` object. `globalVariable` is here the global variable that is exported by the library and `library` is the name of the library (should be equal to the name defined in step 3.). If the library has dependencies you should use the `"library" : { "depends" : [/*dependencies*/], "exports" : "globalVariable"}` syntax, where `dependencies` is an array of dependency names. If a library doesn't export anything (e.g. pure Angular module) you should set the globalVariable to `null`. See `package.json` for examples of both versions.
 5. (optional): if the (angular) library requires some configuration you can best create a wrapper component that does so (such that you only need to define it at one place).
