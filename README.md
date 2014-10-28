@@ -5,7 +5,7 @@ This project is a small example application that shows how the actual Angular pr
 1. `npm install`
 2. `bower install`
 3. `gulp live`
-4. go to: `localhost:8080/{app1,app2}`
+4. go to: `localhost:8080/app1.html` or `localhost:8080/app2.html`
 
 ## Overview in 2 minutes
 - Each component creates it's own Angular module.
