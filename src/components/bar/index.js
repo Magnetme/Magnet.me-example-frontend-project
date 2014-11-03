@@ -8,7 +8,8 @@ var time = require('components/time');
 //in its module constructor.
 var app = angular.module("foo", [
   "ui.bootstrap",
-  require("components/time").module.name
+  require("components/time").module.name,
+  require("components/troll/trollService").module.name
 ]);
 
 module.exports = {

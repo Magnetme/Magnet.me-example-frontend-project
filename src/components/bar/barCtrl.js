@@ -3,6 +3,7 @@
 // Therefore we need to pass all functions that requires DI from angular to ngInject
 // As a small sidenote: I named the function here for ease of debugging. It's not a hard requirement, but it makes things easier!
 
-module.exports = ngInject(function barController($scope) {
+module.exports = ngInject(function barController($scope, troll) {
   $scope.msg = "Hello from barController!";
+  console.log(troll.get());
 });
