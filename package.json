@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "",
   "author": "Tiddo Langerak",
+  "dependencies": {
+    "angular": "~1.2.27",
+    "web-components": "Magnetme/web-components"
+  },
   "devDependencies": {
     "browserify": "^5.11.2",
     "browserify-shim": "^3.7.0",
@@ -26,13 +30,13 @@
     ]
   },
   "browser": {
-    "angular": "./bower_components/angular/angular.js",
+    "angular" : "./node_modules/angular/angular.js",
     "ui-router": "./bower_components/angular-ui-router/release/angular-ui-router.js",
     "lodash": "./bower_components/lodash/dist/lodash.js",
     "ui-bootstrap": "./bower_components/angular-bootstrap/ui-bootstrap-tpls.js"
   },
   "browserify-shim": {
-    "angular": "angular",
+    "angular" : "angular",
     "ui-router": {
       "depends": [
         "angular"

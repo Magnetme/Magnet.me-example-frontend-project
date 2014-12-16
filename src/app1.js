@@ -1,5 +1,6 @@
 var angular = require("angular");
 require("ui-router");
+var uploadComponent = require("magnet-web-components/upload");
 
 //Here we require all page-components.
 //We do not require any directives or external dependencies, since
@@ -8,13 +9,14 @@ require("ui-router");
 var foo = require("components/foo");
 var bar = require("components/bar");
 
-var app =angular.module('app1', [
+var app = angular.module('app1', [
   'ui.router',
   //Each component exports an angular module, and these modules
   //have set a name property. This enables us to depend on modules
   //using actual properties instead of stringly typed names.
   foo.module.name,
-  bar.module.name
+  bar.module.name,
+  uploadComponent.name
 ]);
 
 

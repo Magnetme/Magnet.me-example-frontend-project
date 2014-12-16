@@ -8,7 +8,6 @@
     "bower_components"
   ],
   "dependencies": {
-    "angular": "~1.2.24",
     "lodash": "~2.4.1",
     "angular-bootstrap": "~0.11.2",
     "angular-ui-router": "~0.2.11"
